@@ -1,0 +1,169 @@
+{
+  "info": {
+    "title": "Community Feedback Form",
+    "documentTitle": "Community Review 2024",
+    "description": "Your feedback is crucial for us to enhance community interactions and activities."
+  },
+  "items": [
+    {
+      "title": "What is your full name?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "What is your email address?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Which community services have you used this year?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [
+              { "value": "Library" },
+              { "value": "Sports Center" },
+              { "value": "Recycling Center" },
+              { "value": "Community Clinic" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "How often do you participate in community events?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              { "value": "Weekly" },
+              { "value": "Monthly" },
+              { "value": "Rarely" },
+              { "value": "Never" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "How likely are you to recommend our community events to others?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Very Likely" },
+              { "value": "Somewhat Likely" },
+              { "value": "Neutral" },
+              { "value": "Unlikely" },
+              { "value": "Very Unlikely" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Section Break",
+      "pageBreakItem": {}
+    },
+    {
+      "title": "What improvements would you suggest for community services?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Are you aware of all the services provided by the community center?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [{ "value": "Yes" }, { "value": "No" }],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Rate the quality of the community center facilities.",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Excellent" },
+              { "value": "Good" },
+              { "value": "Average" },
+              { "value": "Poor" },
+              { "value": "Very Poor" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Do you think the community events are accessible to everyone?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Always" },
+              { "value": "Sometimes" },
+              { "value": "Rarely" },
+              { "value": "Never" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "What type of new events would you like to see in the future?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              { "value": "Cultural Festivals" },
+              { "value": "Technology Workshops" },
+              { "value": "Health and Wellness" },
+              { "value": "Youth Sports" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    }
+  ]
+}

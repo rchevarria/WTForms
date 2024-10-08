@@ -1,0 +1,164 @@
+{
+  "info": {
+    "title": "Community Services Survey",
+    "documentTitle": "Service Impact Assessment 2024",
+    "description": "Help us assess and improve the range and quality of services provided to the community."
+  },
+  "items": [
+    {
+      "title": "What is your full name?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "What is your email address?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Which service did you find most beneficial?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Healthcare" },
+              { "value": "Education" },
+              { "value": "Public Safety" },
+              { "value": "Environmental Protection" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Do you feel involved in community decision-making?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [{ "value": "Yes" }, { "value": "No" }],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "How would you rate the communication from the community center?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Excellent" },
+              { "value": "Good" },
+              { "value": "Fair" },
+              { "value": "Poor" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Page Break",
+      "pageBreakItem": {}
+    },
+    {
+      "title": "What is the best way to inform you about community issues?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              { "value": "Email" },
+              { "value": "Newsletter" },
+              { "value": "Social Media" },
+              { "value": "Community Meetings" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "What additional services would you like the community center to offer?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Rate your overall satisfaction with the cleanliness of community facilities.",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Very Clean" },
+              { "value": "Somewhat Clean" },
+              { "value": "Neutral" },
+              { "value": "Somewhat Dirty" },
+              { "value": "Very Dirty" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Do you feel safe in community-managed spaces?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Always" },
+              { "value": "Usually" },
+              { "value": "Sometimes" },
+              { "value": "Rarely" },
+              { "value": "Never" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Would you participate in a community improvement project?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [{ "value": "Yes" }, { "value": "No" }],
+            "shuffle": false
+          }
+        }
+      }
+    }
+  ]
+}

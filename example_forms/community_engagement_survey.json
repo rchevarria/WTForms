@@ -1,0 +1,169 @@
+{
+  "info": {
+    "title": "Community Engagement Survey",
+    "documentTitle": "Community Insights 2024",
+    "description": "We value your input to improve our community events and services."
+  },
+  "items": [
+    {
+      "title": "What is your full name?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "What is your email address?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Have you volunteered in any community service this year?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [{ "value": "Yes" }, { "value": "No" }],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Which types of events are you interested in?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              { "value": "Charity" },
+              { "value": "Sports" },
+              { "value": "Networking" },
+              { "value": "Educational" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Rate your overall satisfaction with our community services.",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Very Satisfied" },
+              { "value": "Satisfied" },
+              { "value": "Neutral" },
+              { "value": "Dissatisfied" },
+              { "value": "Very Dissatisfied" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Section Break",
+      "pageBreakItem": {}
+    },
+    {
+      "title": "How often do you attend local community meetings?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Weekly" },
+              { "value": "Monthly" },
+              { "value": "Rarely" },
+              { "value": "Never" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "Do you feel the community activities are inclusive?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "RADIO",
+            "options": [
+              { "value": "Always" },
+              { "value": "Sometimes" },
+              { "value": "Rarely" },
+              { "value": "Never" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "What age group do you belong to?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "DROP_DOWN",
+            "options": [
+              { "value": "Under 18" },
+              { "value": "18-30" },
+              { "value": "31-45" },
+              { "value": "46-60" },
+              { "value": "Above 60" }
+            ],
+            "shuffle": false
+          }
+        }
+      }
+    },
+    {
+      "title": "How do you prefer to receive updates about community activities?",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "choiceQuestion": {
+            "type": "CHECKBOX",
+            "options": [
+              { "value": "Email" },
+              { "value": "Social Media" },
+              { "value": "Postal Mail" },
+              { "value": "Community Bulletin Boards" }
+            ],
+            "shuffle": true
+          }
+        }
+      }
+    },
+    {
+      "title": "Please suggest any improvements or new activities for the community center.",
+      "questionItem": {
+        "question": {
+          "required": true,
+          "textQuestion": {
+            "paragraph": true
+          }
+        }
+      }
+    }
+  ]
+}

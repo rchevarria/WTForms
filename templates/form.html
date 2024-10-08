@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Services Survey</title>
+</head>
+<body>
+    <h1>Community Services Survey</h1>
+    <form method="POST">
+        {% for field in form %}
+            <div>
+                <label>{{ field.label }}</label><br>
+                {{ field() }}  {# Use field() to render the field #}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
