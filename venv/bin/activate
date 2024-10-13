@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/ryanchevarria/Desktop/WTForms/venv"
+VIRTUAL_ENV="/Users/ryanchevarria/Desktop/WTF_forms/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

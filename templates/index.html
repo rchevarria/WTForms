@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Builder</title>
+</head>
+<body>
+    /**
+     * Renders the main page of the Dynamic Form Builder application.
+     * This page includes a link to create a new form and a link to view the created form in JSON format.
+     */
+    <h1>Dynamic Form Builder</h1>
+    <a href="{{ url_for('add_form') }}">Create a New Form</a>
+    <br>
+    <a href="{{ url_for('view_form') }}" target="_blank">View Created Form (JSON)</a>
+</body>
+</html>

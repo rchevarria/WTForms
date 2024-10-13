@@ -2,18 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Community Services Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ form_title }}</title>  <!-- Set the title dynamically -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e0f7fa; /* Light aqua blue background */
+            color: #006064; /* Dark teal text color */
+        }
+        h1, h2 {
+            text-align: center;
+            color: #004d40; /* Darker teal for headers */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block; /* Makes label inline with inputs */
+        }
+        input[type="file"] {
+            border: 1px solid #006064;
+            border-radius: 4px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+        }
+        button {
+            background-color: #00897b; /* Teal button color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #00796b; /* Darker teal on hover */
+        }
+        .inline-label {
+            display: flex;
+            align-items: center; /* Aligns checkbox/radio with text */
+        }
+        .inline-label input {
+            margin-right: 10px; /* Spacing between input and label */
+        }
+        .description {
+            margin: 10px 0;
+            font-style: italic;
+            color: #004d40; /* Darker teal for description */
+            text-align: center;
+        }
+        /* Optional: Styling for the required asterisk */
+        .required-asterisk {
+            color: red; /* Asterisk in red for required fields */
+        }
+    </style>
 </head>
 <body>
-    <h1>Community Services Survey</h1>
-    <form method="POST">
-        {% for field in form %}
-            <div>
-                <label>{{ field.label }}</label><br>
-                {{ field() }}  {# Use field() to render the field #}
+    <div class="container">
+        <h1>Select Form</h1>
+        
+        <!-- Form to upload JSON file -->
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="json_file">Upload JSON File:</label>
+                <input type="file" name="json_file" accept=".json" required>
             </div>
-        {% endfor %}
-        <input type="submit" value="Submit">
-    </form>
+            <button type="submit">Upload JSON</button>
+        </form>
+
+        <!-- Render the dynamic form if it exists -->
+        {% if form %}
+            <h2>{{ form_title }}</h2> <!-- Display the form title -->
+            <p class="description">{{ form_description }}</p> <!-- Display the form description -->
+            <form method="POST">
+                {{ form.hidden_tag() }}  <!-- CSRF protection -->
+                
+                {% for field in form %}
+                    {% if field.name not in ['title', 'description'] %}
+                        <div class="form-group">
+                            {% if field.type == 'RadioField' or field.type == 'SelectMultipleField' %}
+                                <label>{{ field.label }}</label>
+                                {% for subfield in field %}
+                                    <div class="inline-label">
+                                        {{ subfield() }} <!-- Render the radio/checkbox input -->
+                                        {{ subfield.label }} <!-- Render the label -->
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <label>
+                                    {{ field.label }}
+                                    {% if 'DataRequired' in field.validators|map(attribute='__class__')|list %}
+                                        <span class="required-asterisk">*</span> <!-- Asterisk for required fields -->
+                                    {% endif %}
+                                </label>
+                                {{ field() }} <!-- Render the field (input, checkbox, etc.) -->
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </div>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Success</title>
+</head>
+<body>
+    """
+    Displays a success page after a form is submitted, showing the submitted data.
+    
+    The page includes:
+    - A heading indicating the form was submitted successfully
+    - A list of the submitted form data, with the field names and values
+    - A link to go back to the index page
+    """
+    <h1>Form Submitted Successfully!</h1>
+    <h2>Submitted Data:</h2>
+    <ul>
+        {% for key, value in form_data.items() %}
+            <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Go Back</a>
+</body>
+</html>

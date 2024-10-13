@@ -1,0 +1,6 @@
+Flask
+Flask-WTF
+requests
+python-dotenv
+supabase
+flask-wtf
